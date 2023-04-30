@@ -7,6 +7,7 @@ import 'package:food_ordering_app/reusable_button/large_button.dart';
 import 'package:food_ordering_app/screen_model/on_boarding_model.dart';
 import 'package:food_ordering_app/screen_model/on_boarding_model1.dart';
 import 'package:food_ordering_app/screen_model/on_boarding_model2.dart';
+import 'package:food_ordering_app/screens/Auth_Screens/Login_Page.dart';
 
 class onBoardingPage extends StatefulWidget {
   const onBoardingPage({Key? key}) : super(key: key);
@@ -60,24 +61,26 @@ class _onBoardingPageState extends State<onBoardingPage> {
                   ),
                 ),
               )),
+          onLastPage?
+              Container():
           Container(
             alignment: Alignment(0,0.6),
             child: SmoothPageIndicator(controller: _controller, count: 3, effect: ScrollingDotsEffect(
-              activeDotScale: 1,
-              maxVisibleDots: 5,
-              radius: 8,
-              spacing: 10,
-              dotHeight: 12,
-              dotWidth: 12
+                activeDotColor: Color(0xff6D61F2),
+                dotColor: Colors.grey.withOpacity(0.4),
+                activeDotScale: 1,
+                maxVisibleDots: 5,
+                radius: 8,
+                spacing: 10,
+                dotHeight: 12,
+                dotWidth: 12
             ),),
           ),
           onLastPage?
           Container(
             alignment: Alignment(0, 0.9),
             child:  LargeButton(color: Color(0xff6D61F2), text: 'Get Started',
-                onTap: () {
-                  _controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeIn);
-                }
+                onTap: (){Get.to(()=>loginPage());}
             )
           ):
           Container(
