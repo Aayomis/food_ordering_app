@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class LargeButton extends StatelessWidget {
   final Color color;
   final String text;
@@ -17,16 +17,16 @@ class LargeButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 64,
-        width: 327,
+        width: double.infinity,
+        height: 64.h,
         decoration:  BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(20)
+          borderRadius: BorderRadius.circular(20.r)
         ),
         child: Center(
           child: Text(text,
-            style: const TextStyle(
-                fontSize: 18,
+            style:  TextStyle(
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w500,
                 color: Color(0xffffffff)
             ),
