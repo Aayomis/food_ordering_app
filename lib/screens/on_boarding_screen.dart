@@ -51,7 +51,7 @@ class _onBoardingPageState extends State<onBoardingPage> {
                 ))
                 : Positioned(
                 right: 27.5.w,
-                top: 64.h,
+                top: 20.h,
                 child: GestureDetector(
                   onTap: () {
                     _controller.jumpToPage(2);
@@ -70,12 +70,12 @@ class _onBoardingPageState extends State<onBoardingPage> {
               child: SmoothPageIndicator(controller: _controller, count: 3, effect: ScrollingDotsEffect(
                   activeDotColor: Color(0xff6D61F2),
                   dotColor: Colors.grey.withOpacity(0.4),
-                  activeDotScale: 1.r,
+                  activeDotScale: 1,
                   maxVisibleDots: 5,
-                  radius: 8.r,
-                  spacing: 10.r,
-                  dotHeight: 12.h,
-                  dotWidth: 12.w
+                  radius: 8,
+                  spacing: 10,
+                  dotHeight: 12,
+                  dotWidth: 12
               ),),
             ),
             onLastPage
@@ -95,7 +95,6 @@ class _onBoardingPageState extends State<onBoardingPage> {
                     }
                 )
             )
-
           ],
         ),
       )
