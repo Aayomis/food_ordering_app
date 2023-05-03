@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/reusable_button/large_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_ordering_app/screens/Auth_Screens/register_page.dart';
 class loginPage extends StatefulWidget {
   const loginPage({Key? key}) : super(key: key);
 
@@ -26,7 +27,7 @@ class _loginPageState extends State<loginPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 44.h,),
+            SizedBox(height: 36.h,),
             Center(
               child: Text('Login',
                 style: TextStyle(
@@ -148,25 +149,28 @@ class _loginPageState extends State<loginPage> {
             SizedBox(height: 64.h,),
             LargeButton(color: Color(0xff6D61F2), text: 'Sign In' ),
             SizedBox(height: 24.h,),
-            Center(
-              child: Text.rich(
-                  TextSpan(
-                      text: "Don't have an account?",
-                      style: TextStyle(
-                          fontSize: 14.sp,
-                          color: Color(0xff6E80B0)
-                      ),
-                      children: [
-                        TextSpan(
-                            text: ' Register',
-                            style: TextStyle(
-                                fontSize: 14.sp,
-                                color: Color(0xff6D61F2),
-                                fontWeight: FontWeight.w500
-                            )
-                        )
-                      ]
-                  )),
+            GestureDetector(
+              onTap: (){Get.to(()=>RegisterPage());},
+              child: Center(
+                child: Text.rich(
+                    TextSpan(
+                        text: "Don't have an account?",
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Color(0xff6E80B0)
+                        ),
+                        children: [
+                          TextSpan(
+                              text: ' Register',
+                              style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: Color(0xff6D61F2),
+                                  fontWeight: FontWeight.w500
+                              )
+                          )
+                        ]
+                    )),
+              ),
             )
           ],
         ),
