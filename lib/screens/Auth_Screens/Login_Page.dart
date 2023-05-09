@@ -149,28 +149,26 @@ class _loginPageState extends State<loginPage> {
             SizedBox(height: 64.h,),
             LargeButton(color: Color(0xff6D61F2), text: 'Sign In' ),
             SizedBox(height: 24.h,),
-            GestureDetector(
-              onTap: (){Get.to(()=>RegisterPage());},
-              child: Center(
-                child: Text.rich(
-                    TextSpan(
-                        text: "Don't have an account?",
-                        style: TextStyle(
-                            fontSize: 14.sp,
-                            color: Color(0xff6E80B0)
-                        ),
-                        children: [
-                          TextSpan(
-                              text: ' Register',
-                              style: TextStyle(
-                                  fontSize: 14.sp,
-                                  color: Color(0xff6D61F2),
-                                  fontWeight: FontWeight.w500
-                              )
-                          )
-                        ]
-                    )),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Don\'t have an account? ',
+                  style: TextStyle(
+                      fontSize: 14.sp,
+                      color: Color(0xff6E80B0)
+                  ),
+                ),
+                InkWell(
+                  onTap: (){Get.to(()=>RegisterPage());},
+                  child: Text('Register',
+                      style: TextStyle(
+                          fontSize: 14.sp,
+                          color: Color(0xff6D61F2),
+                          fontWeight: FontWeight.w500
+                      )
+                  ),
+                )
+              ],
             )
           ],
         ),

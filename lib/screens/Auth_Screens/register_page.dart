@@ -18,182 +18,183 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
-            child: Container(
-              margin: EdgeInsets.only(left: 24.w, right: 24.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 34.h,),
-                  Center(
-                    child: Text('Register',
+            child: SingleChildScrollView(
+              physics: AlwaysScrollableScrollPhysics(),
+              child: Container(
+                margin: EdgeInsets.only(left: 24.w, right: 24.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 34.h,),
+                    Center(
+                      child: Text('Register',
+                        style: TextStyle(
+                            fontSize: 24.sp,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff18172B)
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 18.h,),
+                    Center(
+                      child: Text('Access account',
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Color(0xff6E80B0)
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 38.h,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 56.h,
+                          width: 148.w,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16.r),
+                              color: Color(0xffF8F8FA)
+                          ),
+                          child: Center(
+                            child: Image(image: AssetImage('images/google.png')),
+                          ),
+                        ),
+                        SizedBox(width: 29.w,),
+                        Container(
+                          height: 56.h,
+                          width: 148.w,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16.r),
+                              color: Color(0xffF8F8FA)
+                          ),
+                          child: Center(
+                            child: Image(image: AssetImage('images/fb.png')),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 30.h,),
+                    Center(
+                      child: Text('or Register with Email',
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Color(0xff6E80B0)
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30.h,),
+                    Text('Name',
                       style: TextStyle(
-                          fontSize: 24.sp,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                           color: Color(0xff18172B)
                       ),
                     ),
-                  ),
-                  SizedBox(height: 18.h,),
-                  Center(
-                    child: Text('Access account',
+                    SizedBox(height: 10.h,),
+                    Container(
+                      width:MediaQuery.of(context).size.width,
+                      height: 56.h,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF8F8FA),
+                          borderRadius: BorderRadius.circular(18.r)
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'FullName',
+                            contentPadding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.h),
+                            isDense: true
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 22.h,),
+                    Text('Email',
                       style: TextStyle(
                           fontSize: 14.sp,
-                          color: Color(0xff6E80B0)
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff18172B)
                       ),
                     ),
-                  ),
-                  SizedBox(height: 38.h,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 56.h,
-                        width: 148.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.r),
-                            color: Color(0xffF8F8FA)
-                        ),
-                        child: Center(
-                          child: Image(image: AssetImage('images/google.png')),
+                    SizedBox(height: 10.h,),
+                    Container(
+                      width:MediaQuery.of(context).size.width,
+                      height: 56.h,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF8F8FA),
+                          borderRadius: BorderRadius.circular(18.r)
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Email',
+                            contentPadding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.h),
+                            isDense: true
                         ),
                       ),
-                      SizedBox(width: 29.w,),
-                      Container(
-                        height: 56.h,
-                        width: 148.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16.r),
-                            color: Color(0xffF8F8FA)
-                        ),
-                        child: Center(
-                          child: Image(image: AssetImage('images/fb.png')),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 30.h,),
-                  Center(
-                    child: Text('or Register with Email',
+                    ),
+                    SizedBox(height: 22.h,),
+                    Text('Password',
                       style: TextStyle(
                           fontSize: 14.sp,
-                          color: Color(0xff6E80B0)
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff18172B)
                       ),
                     ),
-                  ),
-                  SizedBox(height: 30.h,),
-                  Text('Name',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff18172B)
-                    ),
-                  ),
-                  SizedBox(height: 10.h,),
-                  Container(
-                    width:MediaQuery.of(context).size.width,
-                    height: 56.h,
-                    decoration: BoxDecoration(
-                        color: Color(0xffF8F8FA),
-                        borderRadius: BorderRadius.circular(18.r)
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
+                    SizedBox(height: 10.h,),
+                    Container(
+                      width:MediaQuery.of(context).size.width,
+                      height: 56.h,
+                      decoration: BoxDecoration(
+                          color: Color(0xffF8F8FA),
+                          borderRadius: BorderRadius.circular(18.r)
+                      ),
+                      child: TextField(
+                        obscureText: _obscureText,
+                        decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'FullName',
+                          hintText: 'Password',
                           contentPadding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.h),
-                          isDense: true
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 22.h,),
-                  Text('Email',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff18172B)
-                    ),
-                  ),
-                  SizedBox(height: 10.h,),
-                  Container(
-                    width:MediaQuery.of(context).size.width,
-                    height: 56.h,
-                    decoration: BoxDecoration(
-                        color: Color(0xffF8F8FA),
-                        borderRadius: BorderRadius.circular(18.r)
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Email',
-                          contentPadding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.h),
-                          isDense: true
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 22.h,),
-                  Text('Password',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff18172B)
-                    ),
-                  ),
-                  SizedBox(height: 10.h,),
-                  Container(
-                    width:MediaQuery.of(context).size.width,
-                    height: 56.h,
-                    decoration: BoxDecoration(
-                        color: Color(0xffF8F8FA),
-                        borderRadius: BorderRadius.circular(18.r)
-                    ),
-                    child: TextField(
-                      obscureText: _obscureText,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Password',
-                        contentPadding: EdgeInsets.symmetric(horizontal:20.0.w,vertical:20.h),
-                        isDense: true,
-                        suffixIcon: IconButton(
-                          icon: Icon(
-                            _obscureText ? Icons.visibility : Icons.visibility_off,
+                          isDense: true,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _obscureText ? Icons.visibility : Icons.visibility_off,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _obscureText = !_obscureText;
+                              });
+                            },
                           ),
-                          onPressed: () {
-                            setState(() {
-                              _obscureText = !_obscureText;
-                            });
-                          },
                         ),
                       ),
                     ),
-                  ),
-
-                  SizedBox(height: 50.h,),
-                  LargeButton(color: Color(0xff6D61F2), text: 'Sign Up' ),
-                  SizedBox(height: 22.h,),
-                 GestureDetector(
-                   onTap: (){Get.to(()=>loginPage());},
-                   child:  Center(
-                     child: RichText(
-                         text: TextSpan(
-                             text: "Have Any Account?",
-                             style: TextStyle(
-                                 fontSize: 14.sp,
-                                 color: Color(0xff6E80B0)
-                             ),
-                             children: [
-                               TextSpan(
-                                 text: ' Login',
-                                 style: TextStyle(
-                                     fontSize: 14.sp,
-                                     color: Color(0xff6D61F2),
-                                     fontWeight: FontWeight.w500
-                                 ),
-                               ),
-                             ]
-                         )),
-                   ),
-                 )
-                ],
+                    SizedBox(height: 50.h,),
+                    LargeButton(color: Color(0xff6D61F2), text: 'Sign Up' ),
+                    SizedBox(height: 20.h,),
+                    //TODO: Change this to text and TEXT BUTTON using ROW
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Have any account? ',
+                          style: TextStyle(
+                              fontSize: 14.sp,
+                              color: Color(0xff6E80B0)
+                          ),
+                        ),
+                        InkWell(
+                          onTap: (){Get.to(()=>loginPage());},
+                          child: Text('Login',
+                              style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: Color(0xff6D61F2),
+                                  fontWeight: FontWeight.w500
+                              )
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ))
     );
